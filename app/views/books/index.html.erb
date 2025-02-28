@@ -1,0 +1,137 @@
+<h1>Books</h1>
+
+<table>
+ <thead>
+  <tr>
+   <th>Title</th>
+   <th>Body</th>
+   <th colspn="3"></th>
+  </tr>
+ </thead>
+
+ <tbody>
+
+ <tr>
+   <td>テストタイトル</td>
+   <td>テスト</td>
+   <td>
+    <a href="/books/272748">Show</a>
+   </td>
+   <td>
+    <a href="/books/272748/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272748">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>リーダブルコード</td>
+   <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+   <td>
+    <a href="/books/272747">Show</a>
+   </td>
+   <td>
+    <a href="/books/272747/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272747">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>トラブル知らずのシステム設計</td>
+   <td>システム設計の要点を図解で説明してくれます<td>
+   <td>
+    <a href="/books/272741">Show</a>
+   </td>
+   <td>
+    <a href="/books/272741/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272741">Destroy</a>
+   </td>
+  </tr> 
+
+  <tr>
+   <td>たのしいRuby</td>
+   <td>Rubyの入門におすすめです</td>
+   <td>
+    <a href="/books/272742">Show</a>
+   </td>
+   <td>
+    <a href="/books/272742/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272742">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>入門Git</td>
+   <td>gitについての基本操作から内部構造まで解説してくれます</td>
+   <td>
+    <a href="/books/272743">Show</a>
+   </td>
+   <td>
+    <a href="/books/272743/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272743">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>アルゴリズム図鑑</td>
+   <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+   <td>
+    <a href="/books/272744">Show</a>
+   </td>
+   <td>
+    <a href="/books/272744/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272744">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>達人プログラマー</td>
+   <td>プログラマ入門者は必読！</td>
+   <td>
+    <a href="/books/272745">Show</a>
+   </td>
+   <td>
+    <a href="/books/272745/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272745">Destroy</a>
+   </td>
+  </tr>
+
+  <tr>
+   <td>データベース実践入門</td>
+   <td>効率的なSQL文を教えてくれます</td>
+   <td>
+    <a href="/books/272746">Show</a>
+   </td>
+   <td>
+    <a href="/books/272746/edit">Edit</a>
+   </td>
+   <td>
+    <a href="/books/272746">Destroy</a>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<h2>New book</h2>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+  <h5>Titel</h5>
+  <%= f.text_field :title %>  
+  <h5>Body</h5>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit 'Create Book' %>
+<% end %>
